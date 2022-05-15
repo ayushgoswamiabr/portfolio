@@ -1,0 +1,118 @@
+.navbar {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+.navbarstart h4 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0;
+}
+.navbarmiddle ul {
+  display: flex;
+  list-style: none;
+  justify-self: flex-end;
+  margin-left: 50vw;
+}
+.navbarmiddle ul li {
+  margin: 0 10px;
+  font-size: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+.navlink {
+  display: inline-block;
+  position: relative;
+  font-weight: 400;
+  text-decoration: none;
+}
+.navlink::before {
+  transition: 300ms;
+  height: 4px;
+  content: "";
+  position: absolute;
+  background-color: #0092e6;
+}
+
+.navlinkeffect::before {
+  width: 0%;
+  bottom: -10px;
+}
+.navlinkeffect:hover::before {
+  width: 100%;
+}
+.navbarend {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar svg {
+  font-size: 40px;
+  margin: 0 20px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+.navbar svg:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+.hamburger,
+.hiddenmenu,
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 426px) {
+  .navbarmiddle ul {
+    display: none;
+  }
+  .navbar svg {
+    font-size: 30px;
+    margin: 0 10px;
+  }
+  .hamburger {
+    display: block;
+    transition: all 0.2s ease-in-out;
+  }
+  .hiddenmenu {
+    /* display: none; */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-110%);
+    transition: all 0.5s ease-in-out;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f1624;
+    z-index: 10;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+  }
+  .menu ul,
+  .hiddenmenu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
+    font-size: 20px;
+  }
+  .menu ul li,
+  .hiddenmenu ul li {
+    margin: 15px 0;
+  }
+}

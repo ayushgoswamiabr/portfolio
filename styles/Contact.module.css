@@ -1,0 +1,28 @@
+.flex1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.flex1 div {
+  width: 50%;
+  padding: 100px;
+}
+.socialflex {
+  padding: 0 !important;
+}
+.socialflex svg {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+@media screen and (max-width: 426px) {
+  .flex1 {
+    flex-direction: column;
+  }
+  .flex1 div {
+    width: 100%;
+    padding: 30px;
+  }
+}

@@ -78,7 +78,7 @@
     transition: all 0.2s ease-in-out;
   }
   .hiddenmenu {
-    /* display: none; */
+    display: block;
     position: absolute;
     top: 70px;
     left: 0;
